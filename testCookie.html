@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试cookie</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        #cookie {
+            background-color: cornflowerblue;
+            margin: 100px auto;
+            width: 100px;
+            height: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <input id="1" type="button" value="写入cookie" />
+
+    <input id="2" type="button" value="获取cookie" />
+
+    <script>
+
+        let btn1 = document.getElementById("1");
+        btn1.onclick = function() {
+            let str = "name=Tom";
+            console.log("str = " + str);
+            document.cookie = str;
+            console.log("cookie = " + document.cookie);
+        };
+
+        let btn2 = document.getElementById("2");
+        btn2.onclick = function() {
+            alert(document.cookie);
+        };
+    </script>
+
+</body>
+</html>
